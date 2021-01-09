@@ -1,4 +1,5 @@
 import axios from "axios";
+import { OrderPayload } from "./Orders/types";
 
 const API_URL = 'http://localhost:8080';
 const mapboxToken = process.env.REACT_APP_ACCESS_TOKEN_MAP_BOX;
@@ -11,6 +12,6 @@ export function fetchLocalMapBox(local: string) {
 
 }
 
-export function saveOrder() {
-    return axios.post(`${API_URL}/orders`)
+export function saveOrder(payload: OrderPayload) {
+    return axios.post(`${API_URL}/orders`, payload);
 }

@@ -20,4 +20,3 @@ export type OrderPayload = {
     products: ProductId[];
 } & OrderLocationData;
 
-const payload: OrderPayload = undefined;
